@@ -15,11 +15,8 @@ export default function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
 
-  const openModal = (id: number) => {
-    const foundMovie = movies.find((movie) => movie.id === id);
-    if (foundMovie){
-      setSelectedMovie(foundMovie);
-    }
+  const openModal = (movie: Movie) => {
+      setSelectedMovie(movie);
   };
 
   const closeModal = () => setSelectedMovie(null);
